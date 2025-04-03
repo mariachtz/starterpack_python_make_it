@@ -1,3 +1,4 @@
+# Displays a page of the book with formatted chapter titles and line numbering.
 def show_book_page(book, page_size, title, page_count):
     W  = '\033[0m'  # White (reset to normal)
     O  = '\033[33m' # Orange
@@ -15,6 +16,7 @@ def show_book_page(book, page_size, title, page_count):
     return input(f"{O}If you want to read the next page, press ENTER: {W}")
 
 
+# Reads the book file page by page and allows the user to navigate through it.
 def read_book(book_path, page_size, title):
     page_count = 1
     book = open(book_path, "r" , encoding="utf8")
