@@ -1,0 +1,10 @@
+DEBUG:root:Some debugging information.
+DEBUG:root:Some debugging information.
+DEBUG:root:start application
+DEBUG:root:start application
+DEBUG:root:start application
+8 DEBUG:start application
+8 DEBUG:start application
+22 DEBUG:choice=1
+26 DEBUG:sugar=4
+31 DEBUG:milk=no
