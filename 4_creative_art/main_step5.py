@@ -1,6 +1,6 @@
 # Import relevant functions from the module 'drawing'
 from drawing import make_drawing_radial_lines
-from drawing_for_step_4 import make_drawing_random_radial_lines
+from drawing_for_step_5 import make_drawing_random_radial_lines, make_drawing_abstract_sentences
 
 # Import the object Flask from the flask module
 from flask import Flask, request
@@ -9,7 +9,7 @@ from flask import Flask, request
 COLOUR = "purple"
 
 # Create constant PATH 
-PATH = "drawing.svg"
+PATH = "4_creative_art/drawing.svg"
 
 # Create a webserver object called 'Generative Art'
 server = Flask('Generative Art')
@@ -54,6 +54,16 @@ def serve_random_radial_lines():
     """
     return make_drawing_random_radial_lines()
 
+# Define an HTTP route /sentences to serve random radial lines drawing
+@server.route('/sentences')
+
+
+# Define the function 'serve_abstract_sentences()' and connect it to the route /sentences
+def serve_abstract_sentences():
+    """
+    Make abstract sentence drawing
+    """
+    return make_drawing_abstract_sentences()
 
 # Start the webserver
 server.run('0.0.0.0')

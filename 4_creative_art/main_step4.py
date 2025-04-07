@@ -1,5 +1,7 @@
 # Import relevant functions from the module 'drawing'
 from drawing import make_drawing_radial_lines
+from drawing_for_step_4 import make_drawing_random_radial_lines
+
 # Import the object Flask from the flask module
 from flask import Flask, request
 
@@ -7,7 +9,7 @@ from flask import Flask, request
 COLOUR = "purple"
 
 # Create constant PATH 
-PATH = "drawing.svg"
+PATH = "4_creative_art/drawing.svg"
 
 # Create a webserver object called 'Generative Art'
 server = Flask('Generative Art')
@@ -41,6 +43,16 @@ def serve_custom_radial_lines(width, height):
     granularity = request.args.get('granularity', default=5, type=int) 
 
     return make_drawing_radial_lines(colour=colour, width=width, height=height, granularity=granularity)
+
+# Define an HTTP route /random to serve random radial lines drawing
+@server.route('/random')
+
+# Define the function 'serve_random_radial_lines()' and connect it to the route /random
+def serve_random_radial_lines():
+    """
+    Mamke random radial lines
+    """
+    return make_drawing_random_radial_lines()
 
 
 # Start the webserver

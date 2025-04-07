@@ -2,7 +2,7 @@
 # Import the built-in logging module
 import logging
 
-logging.basicConfig(filename='vending_machine.log',format='%(lineno)d %(levelname)s:%(message)s',
+logging.basicConfig(filename='2_vending_machine/vending_machine.log',format='%(lineno)d %(levelname)s:%(message)s',
                     level=logging.DEBUG)
 # For every log
 logging.debug("start application")
@@ -30,7 +30,7 @@ logging.debug("sugar="+str(sugar))
 milk = input("Would you like to add milk? (yes/no): ").strip().lower()
 logging.debug("milk="+str(milk))
 
-file_variable = open("number_cups.txt", "r")
+file_variable = open("2_vending_machine/number_cups.txt", "r")
 text = file_variable.read()
 file_variable.close()
 
@@ -91,14 +91,7 @@ print(message)
 #print cups
 print ("The number of remaining cups is " + str(number_remaining_cups))
 
-# try:
-#     # action
-# except ErrorType as error:
-#     # fallbackAction
-# finally:
-#     # cleanUpAction
 
-
-file_variable = open("number_cups.txt", "w")
+file_variable = open("2_vending_machine/number_cups.txt", "w")
 file_variable.write(str(number_remaining_cups))
 file_variable.close()

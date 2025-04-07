@@ -25,14 +25,9 @@ def make_drawing_radial_lines(colour= "black", width=100, height=100, granularit
     svg += '</svg>'
     return svg
 
-
-
 def save_in_file(filename, content):
     with open(filename, "w") as file:
         file.write(content)
-
-
-
 
 def make_drawing_cross(draw_line_function, colour):
     svg = '<svg viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg">\n'

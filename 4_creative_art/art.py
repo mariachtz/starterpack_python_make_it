@@ -20,9 +20,9 @@ svg_content = make_drawing_cross(draw_line, COLOUR)
 print(svg_content)
 
 # Save to file
-save_in_file("art.svg", svg_content)
+save_in_file("4_creative_art/art.svg", svg_content)
 
 
 radial_svg = make_drawing_radial_lines(COLOUR)
 print(radial_svg)
-save_in_file("radial.svg", radial_svg)
+save_in_file("4_creative_art/radial.svg", radial_svg)

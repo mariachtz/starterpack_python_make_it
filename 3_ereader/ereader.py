@@ -29,5 +29,5 @@ def read_book(book_path, page_size, title):
 
 page_size =15
 book_title = "LES MISERABLES"
-book_path = "book.txt"
+book_path = "3_ereader/book.txt"
 read_book(book_path,page_size, book_title)

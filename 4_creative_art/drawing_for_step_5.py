@@ -69,7 +69,7 @@ nltk.download('punkt_tab')
 
 def make_drawing_abstract_sentences():
 
-    with open('book.txt', 'r', encoding='utf-8', errors='ignore') as file:
+    with open('4_creative_art/book.txt', 'r', encoding='utf-8', errors='ignore') as file:
         text = file.read()
 
     # Split text into a list of sentences
@@ -127,6 +127,3 @@ def make_drawing_cross(draw_line_function, colour):
     svg += draw_line_function(10, 90, 90, 10, colour)
     svg += '</svg>'
     return svg
-
-
-
